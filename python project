@@ -1,0 +1,43 @@
+"""#write a program to create a billing system at supermarket using loops
+while True:
+    Name=input("enter your name:")
+    total=0
+    while True:
+        Quantity=int(input("enter the quantity of item purchased:"))
+        Amount= float(input("enter the amout per item:"))
+        total += Quantity*Amount
+        repeat=input("do you want to add more items: YES OR NO")
+        if repeat == "no" or repeat =="NO":
+            break
+
+    print("-**"*20)
+    print("Name:",Name)
+    print("Total bill:",total)
+    repeatagain = input("do you have more customers:")
+    if repeatagain=="NO" or repeatagain=="no":
+       break"""
+
+
+foods = []
+prices = []
+total = 0
+
+while True:
+    food = input("Enter a food to buy (q to quit): ")
+    if food.lower() == "q":
+        break
+    else:
+        price = float(input(f"Enter the price of a {food}: $"))
+        foods.append(food)
+        prices.append(price)
+
+print("----- YOUR CART -----")
+
+for food in foods:
+    print(food, end=" ")
+
+for price in prices:
+    total += price
+
+print()
+print(f"Your total is: ${total}")
